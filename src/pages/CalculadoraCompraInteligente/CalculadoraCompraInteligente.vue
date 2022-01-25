@@ -4,7 +4,7 @@
       <div class="row q-col-gutter-sm">
 
         <div class="col-12">
-          <q-input outlined dense mask="#######" color="black" label-color="black" bg-color="white" v-model="precoDeCompraDoProduto" class="full-width" label="Preço de compra do Produto" @update:model-value="calculandoValorFinal()" />
+          <q-input outlined dense color="black" label-color="black" bg-color="white" v-model="precoDeCompraDoProduto" class="full-width" label="Preço de compra do Produto" @update:model-value="calculandoValorFinal()" />
         </div>
 
         <div class="col-12">
@@ -17,7 +17,7 @@
             <p>R$ {{ valorCambio }}</p>
           </div>
           <div class="full-width">
-            <q-input outlined dense mask="#.##" color="black" label-color="black" bg-color="white" v-model="quantidadeDePontosPorRealNoCartao" class="full-width" label="Quantidade de pontos por real no cartão" @update:model-value="calculandoValorFinal()" />
+            <q-input outlined dense color="black" label-color="black" bg-color="white" v-model="quantidadeDePontosPorRealNoCartao" class="full-width" label="Quantidade de pontos por real no cartão" @update:model-value="calculandoValorFinal()" />
           </div>
         </div>
 
@@ -26,7 +26,7 @@
         </div>
 
         <div class="col-12">
-          <q-input outlined dense mask="#######" color="black" label-color="black" bg-color="white" v-model="valorDoMilheiro" class="full-width" label="Valor do Milheiro" @update:model-value="calculandoValorFinal()" />
+          <q-input outlined dense color="black" label-color="black" bg-color="white" v-model="valorDoMilheiro" class="full-width" label="Valor do Milheiro" @update:model-value="calculandoValorFinal()" />
         </div>
 
         <div class="col-12" style="display: flex; justify-content: space-between;">
@@ -35,7 +35,7 @@
         </div>
 
         <div class="col-12 q-pb-md" v-if="usaraSpp">
-          <q-input outlined dense mask="#######" color="black" label-color="black" bg-color="white" v-model="valorDoSeguroProtecaoDePreco" class="full-width" label="Valor do Seguro Proteção de Preço" @update:model-value="calculandoValorFinal()" />
+          <q-input outlined dense color="black" label-color="black" bg-color="white" v-model="valorDoSeguroProtecaoDePreco" class="full-width" label="Valor do Seguro Proteção de Preço" @update:model-value="calculandoValorFinal()" />
         </div>
       </div>
 
