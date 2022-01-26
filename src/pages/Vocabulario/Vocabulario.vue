@@ -2,7 +2,7 @@
   <q-page padding>
     <div class="container">
       <div class="row q-col-gutter-sm">
-        <q-card flat bordered class="my-card" v-for="vocabulario in teste" :key="vocabulario.id">
+        <q-card flat bordered class="my-card" v-for="vocabulario in vocabularios" :key="vocabulario.id">
           <q-card-section>
             <div class="text-h6">{{ vocabulario.title }}</div>
           </q-card-section>
@@ -24,7 +24,7 @@ export default {
 
   data () {
     return {
-      teste: [
+      vocabularios: [
         { id: 1, title: 'BF - Black Friday', text: 'Black Friday é o dia que inaugura a temporada de compras natalícias com significativas promoções em muitas lojas retalhistas e grandes armazéns. É um dia depois do Dia de Ação de Graças nos Estados Unidos, ou seja, celebra-se no dia seguinte à quarta.' },
         { id: 2, title: 'HM - HotMilhas', text: 'A HotMilhas é a forma mais simples e segura de vender as suas milhas TAM (Fidelidade), GOL (Smiles), Azul (Tudo Azul) e Avianca (Amigo) na internet.' },
         { id: 3, title: 'Livelo', text: 'A Livelo é o programa de recompensas criado pelo Bradesco e o Banco do Brasil, que permite trocar pontos por diversos produtos ou serviços. Uma das principais formas para acumular pontos é utilizar os cartões Banco do Brasil e Bradesco na função crédito.' },
