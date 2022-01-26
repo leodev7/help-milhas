@@ -4,7 +4,7 @@
       <div class="row q-col-gutter-sm">
 
         <div class="col-12">
-          <q-input outlined dense maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model="precoDeCompraDoProduto" class="full-width" label="Preço de compra do Produto" @update:model-value="calculandoValorFinal()" />
+          <q-input outlined dense maxlength="9" color="black" label-color="black" bg-color="white" v-model.lazy="precoDeCompraDoProduto" v-money="money" class="full-width" label="Preço de compra do Produto" @update:model-value="calculandoValorFinal()" />
         </div>
 
         <div class="col-12">
@@ -98,12 +98,20 @@
 </template>
 
 <script>
+import {VMoney} from 'v-money'
 
 export default {
   name: 'CalculadoraCompraInteligente',
+  directives: { money: VMoney},
 
   data () {
     return {
+      money: {
+        decimal: ',',
+        thousands: '.',
+        precision: 2,
+        masked: false
+      },
       moeda: 'REAL',
       tiposDeMoedas: [
         { id: 'REAL', name: 'Real' },
@@ -160,10 +168,10 @@ export default {
     },
 
     calculandoValorFinal () {
-      this.totalDePontosPeloProduto = (this.precoDeCompraDoProduto * this.quantidadeDePontosPorReal)
+      this.totalDePontosPeloProduto = (parseFloat(this.precoDeCompraDoProduto.replace('.','').replace(',', '.')) * this.quantidadeDePontosPorReal)
       this.totalDePontosPeloProduto = ~~this.totalDePontosPeloProduto
 
-      this.totalDePontosPeloCartao = (this.precoDeCompraDoProduto / this.valorCambio) * this.quantidadeDePontosPorRealNoCartao
+      this.totalDePontosPeloCartao = (parseFloat(this.precoDeCompraDoProduto.replace('.','').replace(',', '.')) / this.valorCambio) * this.quantidadeDePontosPorRealNoCartao
       this.totalDePontosPeloCartao = ~~this.totalDePontosPeloCartao
 
       this.totalDePontosProdutosECartao = this.totalDePontosPeloProduto + this.totalDePontosPeloCartao
@@ -183,7 +191,7 @@ export default {
       this.valorRecuperadoComPontos = ((this.valorDoMilheiro / 100) * this.totalDePontosAposTransferenciaCalculado)
       this.valorRecuperadoComPontos = ~~this.valorRecuperadoComPontos / 10
 
-      this.valorFinalDoProduto = this.precoDeCompraDoProduto - this.valorRecuperadoComPontos
+      this.valorFinalDoProduto = parseFloat(this.precoDeCompraDoProduto.replace('.','').replace(',', '.')) - this.valorRecuperadoComPontos
       if (this.usaraSpp && this.valorDoSeguroProtecaoDePreco) {
         this.valorFinalDoProduto -= this.valorDoSeguroProtecaoDePreco
       } else {
@@ -192,7 +200,7 @@ export default {
       }
       this.valorFinalDoProduto = ~~this.valorFinalDoProduto
 
-      this.descontoEmPorcentagem = ((this.valorFinalDoProduto * 100) / this.precoDeCompraDoProduto) - 100
+      this.descontoEmPorcentagem = ((this.valorFinalDoProduto * 100) / parseFloat(this.precoDeCompraDoProduto.replace('.','').replace(',', '.'))) - 100
       this.descontoEmPorcentagem = ~~Math.abs(this.descontoEmPorcentagem)
 
     },
