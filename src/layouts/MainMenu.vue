@@ -81,7 +81,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item disable clickable :to="{ name: '#' }">
+          <q-item clickable :to="{ name: 'r_quemsomos' }" @click="titulo = 'Quem somos'">
             <q-item-section avatar>
               <q-icon name="help_outline" />
             </q-item-section>

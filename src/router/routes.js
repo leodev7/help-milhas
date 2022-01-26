@@ -6,6 +6,7 @@ const routes = [
     children: [
       { path: '', name: 'r_index', component: () => import('pages/Index.vue') },
       { path: '', name: 'r_calculadoracomprainteligente', component: () => import('pages/CalculadoraCompraInteligente/CalculadoraCompraInteligente.vue') },
+      { path: '', name: 'r_quemsomos', component: () => import('pages/QuemSomos/QuemSomos.vue') },
       { path: '', name: 'r_vocabulario', component: () => import('pages/Vocabulario/Vocabulario.vue') }
     ]
   },

@@ -147,6 +147,19 @@ a:active {
   padding: 0
 }
 
+/* Quem somos */
+
+.redesSociais {
+  display: flex;
+  align-items: center;
+}
+
+.botaoRedesSociais {
+  width: 10rem;
+  background-color: #FF522F;
+  color: white !important;
+}
+
 /* media query */
 
 @media only screen and (max-width: 600px) {
@@ -181,5 +194,10 @@ a:active {
 
   .my-card {
     margin: 0.4rem 0.5rem;
+  }
+
+  .redesSociais {
+    flex-direction: column;
+    padding: 0 3rem;
   }
 }
