@@ -6,7 +6,7 @@
         <q-btn dense flat round class="menu" icon="menu_open" @click="left = !left" />
       </div>
       <div>
-        <p>Compra inteligente</p>
+        <p>{{ titulo }}</p>
       </div>
       <div style="width: 33.59px;"></div>
     </q-header>
@@ -17,12 +17,11 @@
           <q-item-label class="logo text-center">
             <img src="/icons/434x0w.png" alt="Ícone help milhas" class="q-py-lg">
             <span class="text-body1">Help Milhas</span>
-            <br /><br />
           </q-item-label>
 
           <!-- DP menu start -->
 
-          <q-item clickable :to="{ name: 'r_calculadoracomprainteligente' }">
+          <q-item clickable :to="{ name: 'r_calculadoracomprainteligente' }" @click="titulo = 'Compra inteligente'">
             <q-item-section avatar>
               <q-icon name="widgets" />
             </q-item-section>
@@ -72,7 +71,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item disable clickable :to="{ name: '#' }">
+          <q-item clickable :to="{ name: 'r_vocabulario' }" @click="titulo = 'Vocabulário'">
             <q-item-section avatar>
               <q-icon name="description" />
             </q-item-section>
@@ -183,7 +182,8 @@ export default {
 
   data () {
     return {
-      left: false
+      left: false,
+      titulo: 'Compra inteligente'
     }
   }
 }

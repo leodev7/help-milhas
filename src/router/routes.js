@@ -5,7 +5,8 @@ const routes = [
     component: () => import('layouts/MainMenu.vue'),
     children: [
       { path: '', name: 'r_index', component: () => import('pages/Index.vue') },
-      { path: '', name: 'r_calculadoracomprainteligente', component: () => import('pages/CalculadoraCompraInteligente/CalculadoraCompraInteligente.vue') }
+      { path: '', name: 'r_calculadoracomprainteligente', component: () => import('pages/CalculadoraCompraInteligente/CalculadoraCompraInteligente.vue') },
+      { path: '', name: 'r_vocabulario', component: () => import('pages/Vocabulario/Vocabulario.vue') }
     ]
   },
   
