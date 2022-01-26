@@ -103,7 +103,7 @@
           </q-item>
 
         </q-list>
-        <div class="lojasdeAplicativos q-pt-xl">
+        <div class="lojasDeAplicativos q-pt-xl">
           <a href="https://apps.apple.com/ga/app/help-milhas/id1600378714" target="_blank"><img src="/img/appStore.jpg" alt="Loja de aplicativos apple" style="width: 150px" /></a>
           <a href="https://play.google.com/store/apps/details?id=com.helpmilhas" target="_blank"><img src="/img/googlePlay.png" alt="Loja de aplicativos google" style="width: 150px" /></a>
         </div>
@@ -148,7 +148,7 @@ export default {
             label: 'Linkedin',
             img: '/logo/linkedin_logo_icon_134604.png',
             id: 'linkedin',
-            url: 'https://www.linkedin.com/sharing/share-offsite/?url=helpmilhas.netlify.app'
+            url: 'https://www.linkedin.com/sharing/share-offsite/?url=https://helpmilhas.netlify.app'
           },
           {
             label: 'Telegram',
@@ -170,7 +170,7 @@ export default {
               $q.notify({ message: 'Url copiada!' })
             })
             .catch(() => {
-              $q.notify({ message: 'Não foi possível copiar a url '})
+              $q.notify({ message: 'Não foi possível copiar a url'})
             })
           return
         }
