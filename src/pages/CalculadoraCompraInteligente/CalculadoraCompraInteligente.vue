@@ -81,6 +81,12 @@
         </div>
       </div>
 
+      <div class="row q-mt-sm">
+        <div class="col-12">
+          <q-btn label="Limpar" class="botaoLimpar full-width" @click="limparCampos()" />
+        </div>
+      </div>
+
       <div class="row q-pt-md">
         <div class="col-12 footer">
           <p>Desenvolvido por <a href="https://programadorzao.com.br/" target="_blank">Joabson (Programadorzão)</a> para <a href="https://apps.apple.com/ga/app/help-milhas/id1600378714" target="_blank">iOS</a> e <a href="https://play.google.com/store/apps/details?id=com.helpmilhas" target="_blank">Android</a>.</p>
@@ -189,6 +195,16 @@ export default {
       this.descontoEmPorcentagem = ((this.valorFinalDoProduto * 100) / this.precoDeCompraDoProduto) - 100
       this.descontoEmPorcentagem = ~~Math.abs(this.descontoEmPorcentagem)
 
+    },
+
+    limparCampos () {
+      this.usaraSpp = false
+      this.precoDeCompraDoProduto = null
+      this.quantidadeDePontosPorReal = null
+      this.quantidadeDePontosPorRealNoCartao = null
+      this.transferenciaBonificada = null
+      this.valorDoMilheiro = null
+      this.valorDoSeguroProtecaoDePreco = null
     }
   }
 

@@ -98,6 +98,11 @@ div.q-field__native.row.items-center {
   width: 200px;
 }
 
+.botaoLimpar {
+  background-color: #FF522F;
+  color: white !important;
+}
+
 /* app global css */
 .q-header {
   background-color: transparent;
