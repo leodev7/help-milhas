@@ -4,11 +4,11 @@
       <div class="row q-col-gutter-sm">
 
         <div class="col-12">
-          <q-input outlined dense maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model="precoDeCompraDoProduto" class="full-width" label="Preço de compra do Produto" @update:model-value="calculandoValorFinal()" />
+          <q-input inputmode="decimal" outlined dense maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model="precoDeCompraDoProduto" class="full-width" label="Preço de compra do Produto" @update:model-value="calculandoValorFinal()" />
         </div>
 
         <div class="col-12">
-          <q-input outlined dense mask="##" color="black" label-color="black" bg-color="white" v-model="quantidadeDePontosPorReal" class="full-width" label="Quantidade de pontos por real (do produto)" @update:model-value="calculandoValorFinal()" />
+          <q-input inputmode="decimal" outlined dense mask="##" color="black" label-color="black" bg-color="white" v-model="quantidadeDePontosPorReal" class="full-width" label="Quantidade de pontos por real (do produto)" @update:model-value="calculandoValorFinal()" />
         </div>
 
         <div class="col-xs-12 col-md-6">
@@ -17,15 +17,15 @@
         </div>
 
         <div class="col-xs-12 col-md-6">
-          <q-input outlined dense mask="#.##" color="black" label-color="black" bg-color="white" v-model="quantidadeDePontosPorRealNoCartao" class="full-width" label="Quantidade de pontos por real no cartão" @update:model-value="calculandoValorFinal()" />
+          <q-input inputmode="decimal" outlined dense mask="#.##" color="black" label-color="black" bg-color="white" v-model="quantidadeDePontosPorRealNoCartao" class="full-width" label="Quantidade de pontos por real no cartão" @update:model-value="calculandoValorFinal()" />
         </div>
 
         <div class="col-12">
-          <q-input outlined dense mask="###" color="black" label-color="black" bg-color="white" v-model="transferenciaBonificada" class="full-width" label="Transferência Bonificada (%)" @update:model-value="calculandoValorFinal()" />
+          <q-input inputmode="decimal" outlined dense mask="###" color="black" label-color="black" bg-color="white" v-model="transferenciaBonificada" class="full-width" label="Transferência Bonificada (%)" @update:model-value="calculandoValorFinal()" />
         </div>
 
         <div class="col-12">
-          <q-input outlined dense maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model="valorDoMilheiro" class="full-width" label="Valor do Milheiro" @update:model-value="calculandoValorFinal()" />
+          <q-input inputmode="decimal" outlined dense maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model="valorDoMilheiro" class="full-width" label="Valor do Milheiro" @update:model-value="calculandoValorFinal()" />
         </div>
 
         <div class="col-12" style="display: flex; justify-content: space-between;">
@@ -34,7 +34,7 @@
         </div>
 
         <div class="col-12 q-pb-md" v-if="usaraSpp">
-          <q-input outlined dense maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model="valorDoSeguroProtecaoDePreco" class="full-width" label="Valor do Seguro Proteção de Preço" @update:model-value="calculandoValorFinal()" />
+          <q-input inputmode="decimal" outlined dense maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model="valorDoSeguroProtecaoDePreco" class="full-width" label="Valor do Seguro Proteção de Preço" @update:model-value="calculandoValorFinal()" />
         </div>
       </div>
 
