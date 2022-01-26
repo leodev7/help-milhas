@@ -37,6 +37,11 @@ body {
   color: white
 }
 
+.q-checkbox.cursor-pointer.no-outline.row.inline.no-wrap.items-center.reverse.text-capitalize.q-ml-sm {
+  position: relative;
+  top: -6px;
+}
+
 table { 
   border-collapse: collapse;
 }
@@ -95,11 +100,10 @@ div.q-field__native.row.items-center {
 /* app global css */
 .q-header {
   background-color: transparent;
-  margin: 8px 0 0 16px;
+  margin: 8px 16px 0;
   display: flex;
   justify-content: space-between;
   color: #FF522F
-
 }
 
 .q-header p {
@@ -119,7 +123,39 @@ a:active {
 
 .footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  text-align: center;
+}
+
+.lojasdeAplicativos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* media query */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  .col-12:first-child {
+    padding-top: 12px;
+  }
+
+  .q-field--dense .q-field__label, p {
+    font-size: 12px;
+  }
+
+  th {
+    width: 60%;
+    font-size: 11px;
+  }
+
+  .q-checkbox.cursor-pointer.no-outline.row.inline.no-wrap.items-center.reverse.text-capitalize.q-ml-sm {
+    font-size: 13px;
+    position: relative;
+    top: -6px;
+  }
 }

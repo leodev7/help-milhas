@@ -8,10 +8,10 @@
       <div>
         <p>Compra inteligente</p>
       </div>
-      <div></div>
+      <div style="width: 33.59px;"></div>
     </q-header>
 
-    <q-drawer v-model="left" side="left" bordered>
+    <q-drawer show-if-above v-model="left" side="left" bordered>
       <q-scroll-area class="fit q-py-sm">
         <q-list>
           <q-item-label class="logo text-center">
@@ -103,6 +103,10 @@
           </q-item>
 
         </q-list>
+        <div class="lojasdeAplicativos q-pt-xl">
+          <a href="https://apps.apple.com/ga/app/help-milhas/id1600378714" target="_blank"><img src="/img/appStore.jpg" alt="Loja de aplicativos apple" style="width: 150px" /></a>
+          <a href="https://play.google.com/store/apps/details?id=com.helpmilhas" target="_blank"><img src="/img/googlePlay.png" alt="Loja de aplicativos google" style="width: 150px" /></a>
+        </div>
       </q-scroll-area>
     </q-drawer>
 
