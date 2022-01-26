@@ -92,13 +92,13 @@
             </q-item-section>
           </q-item>
 
-          <q-item disable clickable :to="{ name: '#' }">
+          <q-item clickable @click="show(true)">
             <q-item-section avatar>
               <q-icon name="share" />
             </q-item-section>
 
             <q-item-section>
-              <q-item-label>Compartilhar o App</q-item-label>
+              <q-item-label>Compartilhar site</q-item-label>
             </q-item-section>
           </q-item>
 
@@ -118,9 +118,68 @@
 </template>
 
 <script>
+import { useQuasar, copyToClipboard } from 'quasar'
 
 export default {
   name: 'MainMenu',
+
+  setup () {
+    const $q = useQuasar()
+
+    function show (grid) {
+      $q.bottomSheet({
+        dark: true,
+        message: 'Compartilhar site no',
+        grid,
+        actions: [
+          {
+            label: 'Whatsapp',
+            img: '/logo/whatsapp_logo_icon_134602.png',
+            id: 'whatsapp',
+            url: 'https://api.whatsapp.com/send?text=Olá, dê uma olhada neste site que estou usando para me auxiliar em compras inteligentes para ganhar pontos e transformar em milhas (dinheiro 💰🤑💰). https://helpmilhas.netlify.app/#/'
+          },
+          {
+            label: 'Twitter',
+            img: '/logo/twitter_logo_icon_134613.png',
+            id: 'twitter',
+            url: 'https://twitter.com/intent/tweet?text=Estou%20usando%20este%20site%20para%20calcular%20compras%20inteligentes%2C%20ganhar%20pontos%20e%20transformar%20em%20milhas%20(dinheiro%20%F0%9F%92%B0%F0%9F%A4%91%F0%9F%92%B0)&url=https%3A%2F%2Fhelpmilhas.netlify.app%2F%23%2F'
+          },
+          {
+            label: 'Linkedin',
+            img: '/logo/linkedin_logo_icon_134604.png',
+            id: 'linkedin',
+            url: 'https://www.linkedin.com/sharing/share-offsite/?url=helpmilhas.netlify.app'
+          },
+          {
+            label: 'Telegram',
+            img: '/logo/telegram_logo_icon_134592.png',
+            id: 'telegram',
+            url: 'https://t.me/share/url?url=https://helpmilhas.netlify.app/&text=Olá, dê uma olhada neste site que estou usando para me auxiliar em compras inteligentes para ganhar pontos e transformar em milhas (dinheiro 💰🤑💰).'
+          },
+          {
+            label: 'Copiar link',
+            img: '/logo/copy-content_icon-icons.com_40923.png',
+            id: 'copyUrl',
+            url: 'https://helpmilhas.netlify.app'
+          }
+        ]
+      }).onOk(action => {
+        if (action.id === 'copyUrl') {
+          copyToClipboard(action.url)
+            .then(() => {
+              $q.notify({ message: 'Url copiada!' })
+            })
+            .catch(() => {
+              $q.notify({ message: 'Não foi possível copiar a url '})
+            })
+          return
+        }
+        window.open(action.url, '_blank')
+      })
+    }
+
+    return { show }
+  },
 
   data () {
     return {
