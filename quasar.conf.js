@@ -140,9 +140,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `Quasar App`,
-        short_name: `Quasar App`,
-        description: `A Quasar Framework app`,
+        name: `Help milhas`,
+        short_name: `Help milhas`,
+        description: `Calcule pontos e milhas nas compras inteligentes`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
