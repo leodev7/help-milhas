@@ -5,7 +5,7 @@
         <q-card flat bordered class="my-card" v-for="(cartao, index) in cartoes" :key="`cartao.${index}`">
           <q-card-section class="headerCardCartao">
             <img :src="cartao.icone" alt="Imagem do cartão de crédito" style="max-width: 100%">
-            <p>Posição: {{ index + 1 }}</p>
+            <p>Posição: {{ index + 1 }}°</p>
           </q-card-section>
 
           <q-card-section>
