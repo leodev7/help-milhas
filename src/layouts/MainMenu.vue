@@ -41,7 +41,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item disable clickable :to="{ name: '#' }">
+          <q-item clickable :to="{ name: 'r_calcularvalormilheiro' }" @click="titulo = 'Calcular Valor do Milheiro'">
             <q-item-section avatar>
               <q-icon name="business" />
             </q-item-section>
