@@ -27,7 +27,8 @@ body {
 }
 
 .q-field__native.row.items-center span, .q-icon.notranslate.material-icons.q-select__dropdown-icon, a {
-  color: #FF522F
+  color: #FF522F;
+  font-weight: 700;
 }
 
 .q-virtual-scroll__content {

@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-12 q-col-gutter-md">
                     <p>O aplicativo help milhas foi desenvolvido com o intuíto de ajudar os usuários a enxergarem as possibilidades que existem dentro das milhas através de informações que podem mudar o dia a dia.</p>
-                    <p>O projeto foi totalmente desenvolvido por Joabson, também conhecido como programadorzão, um entusiasta no meio das milhas que descobriu um mundo novo e cheio de oportunidades.</p>
-                    <p>Após ter sido lançado nas lojas de aplicativos de celulares e ter ajudado mais de 1000 usuários, eu (Leonardo) pedi a permissão do joabson para passar o aplicativo para a web, apenas com a intenção de facilitar o uso pelo computador/navegador.</p>
+                    <p>O projeto foi totalmente desenvolvido por <a href="https://programadorzao.com.br/" target="_blank">Joabson</a>, também conhecido como programadorzão, um entusiasta no meio das milhas que descobriu um mundo novo e cheio de oportunidades.</p>
+                    <p>Após ter sido lançado nas lojas de aplicativos de celulares e ter ajudado mais de 1000 usuários, eu (<a href="https://leodev7.github.io/portfolio/" target="_blank">Leonardo</a>) pedi a permissão do joabson para passar o aplicativo para a web, apenas com a intenção de facilitar o uso pelo computador/navegador.</p>
                     <p class="q-mt-sm">Redes sociais do criador do projeto e dos aplicativos:</p>
                     <div class="row">
                         <div class="col-12 redesSociais q-gutter-md">
