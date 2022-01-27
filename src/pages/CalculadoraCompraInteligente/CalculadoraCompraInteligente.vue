@@ -25,7 +25,7 @@
         </div>
 
         <div class="col-12">
-          <q-input outlined dense maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model="valorDoMilheiro" class="full-width" label="Valor do Milheiro" @update:model-value="calculandoValorFinal()" />
+          <q-input outlined dense maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model.lazy="valorDoMilheiro" v-money="money" class="full-width" label="Valor do Milheiro" @update:model-value="calculandoValorFinal()" />
         </div>
 
         <div class="col-12" style="display: flex; justify-content: space-between;">
@@ -125,8 +125,8 @@ export default {
       quantidadeDePontosPorReal: null,
       quantidadeDePontosPorRealNoCartao: null,
       transferenciaBonificada: null,
-      valorDoMilheiro: null,
-      valorDoSeguroProtecaoDePreco: null,
+      valorDoMilheiro: '',
+      valorDoSeguroProtecaoDePreco: '',
 
       totalDePontosPeloProduto: null,
       totalDePontosPeloCartao: null,
@@ -188,7 +188,7 @@ export default {
         this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
       }
 
-      this.valorRecuperadoComPontos = ((this.valorDoMilheiro / 100) * this.totalDePontosAposTransferenciaCalculado)
+      this.valorRecuperadoComPontos = (parseFloat(this.valorDoMilheiro.replace('.','').replace(',', '.')) / 100) * this.totalDePontosAposTransferenciaCalculado
       this.valorRecuperadoComPontos = ~~this.valorRecuperadoComPontos / 10
 
       this.valorFinalDoProduto = parseFloat(this.precoDeCompraDoProduto.replace('.','').replace(',', '.')) - this.valorRecuperadoComPontos
