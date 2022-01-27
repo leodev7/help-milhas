@@ -197,10 +197,11 @@ export default {
       } else if (!this.usaraSpp && this.valorDoSeguroProtecaoDePreco) {
         this.valorDoSeguroProtecaoDePreco = ''
       }
-      this.valorFinalDoProduto = ~~this.valorFinalDoProduto
 
-      this.descontoEmPorcentagem = ((this.valorFinalDoProduto * 100) / parseFloat(this.precoDeCompraDoProduto.replace('.','').replace(',', '.'))) - 100
+      this.descontoEmPorcentagem = ((~~this.valorFinalDoProduto * 100) / parseFloat(this.precoDeCompraDoProduto.replace('.','').replace(',', '.'))) - 100
       this.descontoEmPorcentagem = ~~Math.abs(this.descontoEmPorcentagem)
+
+      this.valorFinalDoProduto = this.valorFinalDoProduto.toFixed(2).replace('.', ',')
 
     },
 
