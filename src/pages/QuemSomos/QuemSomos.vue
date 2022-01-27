@@ -14,7 +14,7 @@
                             <q-btn label="Telegram" class="botaoRedesSociais" href="https://t.me/joabson_programadorzao" target="_blank" />
                         </div>
                     </div>
-                    <p class="q-mt-sm">Redes sociais do desenvolvedor web:</p>
+                    <p class="q-mt-md">Redes sociais do desenvolvedor web:</p>
                     <div class="row">
                         <div class="col-12 redesSociais q-gutter-md">
                             <q-btn label="Portfolio" class="botaoRedesSociais" href="https://leodev7.github.io/portfolio/" target="_blank" />
