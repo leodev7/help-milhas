@@ -33,7 +33,7 @@
             </tr>
             <tr>
               <th>Valor milheiro:</th>
-              <td>R$ {{ valorFinalDoProduto }}</td>
+              <td>R$ {{ valorDoMilheiro }}</td>
             </tr>
           </table>
         </div>
@@ -41,7 +41,7 @@
 
       <div class="row q-mt-sm">
         <div class="col-12">
-          <q-btn label="Limpar" class="botaoLimpar full-width" @click="limparCampos()" />
+          <q-btn outline label="Limpar" class="botaoLimpar full-width" @click="limparCampos()" />
         </div>
       </div>
     </div>
@@ -68,15 +68,9 @@ export default {
       valorInvestido: null,
       quantidadeDePontosComprados: null,
       transferenciaBonificada: null,
-      valorDoMilheiro: '',
 
-      totalDePontosPeloProduto: null,
-      totalDePontosPeloCartao: null,
-      totalDePontosProdutosECartao: null,
       totalDePontosAposTransferenciaCalculado: null,
-
-      valorRecuperadoComPontos: null,
-      valorFinalDoProduto: null
+      valorDoMilheiro: null
     }
   },
 
@@ -115,9 +109,15 @@ export default {
         this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
       }
 
-      this.valorFinalDoProduto = (parseFloat(this.valorInvestido.replace('.','').replace(',', '.')) / this.totalDePontosAposTransferenciaCalculado) * 1000
-      this.valorFinalDoProduto = this.valorFinalDoProduto.toFixed(2).replace('.', ',')
+      this.valorDoMilheiro = (parseFloat(this.valorInvestido.replace('.','').replace(',', '.')) / this.totalDePontosAposTransferenciaCalculado) * 1000
+      this.valorDoMilheiro = this.valorDoMilheiro.toFixed(2).replace('.', ',')
 
+    },
+
+    limparCampos () {
+      this.valorInvestido = ''
+      this.quantidadeDePontosComprados = ''
+      this.transferenciaBonificada = ''
     }
   }
 

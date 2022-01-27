@@ -83,7 +83,7 @@
 
       <div class="row q-mt-sm">
         <div class="col-12">
-          <q-btn label="Limpar" class="botaoLimpar full-width" @click="limparCampos()" />
+          <q-btn outline label="Limpar" class="botaoLimpar full-width" @click="limparCampos()" />
         </div>
       </div>
 
@@ -207,12 +207,12 @@ export default {
 
     limparCampos () {
       this.usaraSpp = false
-      this.precoDeCompraDoProduto = null
-      this.quantidadeDePontosPorReal = null
-      this.quantidadeDePontosPorRealNoCartao = null
-      this.transferenciaBonificada = null
-      this.valorDoMilheiro = null
-      this.valorDoSeguroProtecaoDePreco = null
+      this.precoDeCompraDoProduto = ''
+      this.quantidadeDePontosPorReal = ''
+      this.quantidadeDePontosPorRealNoCartao = ''
+      this.transferenciaBonificada = ''
+      this.valorDoMilheiro = ''
+      this.valorDoSeguroProtecaoDePreco = ''
     }
   }
 

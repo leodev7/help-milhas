@@ -100,7 +100,6 @@ div.q-field__native.row.items-center {
 }
 
 .botaoLimpar {
-  background-color: #FF522F;
   color: white !important;
 }
 
@@ -171,6 +170,11 @@ a:active {
 
   .q-header {
     padding-bottom: 0.6rem;
+  }
+
+  .q-header p {
+    font-size: 18px;
+    font-weight: 800;
   }
 
   .q-field--dense .q-field__label, p {
