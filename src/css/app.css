@@ -139,6 +139,26 @@ a:active {
   align-items: center;
 }
 
+/* Ranking cartoes */
+.headerCardCartao {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.tituloCartoes {
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.descricaoCartoes {
+  padding-bottom: 8px;
+  white-space: pre-wrap;
+}
+
 /* Vocabulario */
 .my-card {
   width: 100%;

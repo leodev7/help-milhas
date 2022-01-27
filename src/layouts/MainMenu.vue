@@ -61,7 +61,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item disable clickable :to="{ name: '#' }">
+          <q-item clickable :to="{ name: 'r_rankingmelhorescartoes' }" @click="titulo = 'Ranking de Cartões'">
             <q-item-section avatar>
               <q-icon name="credit_card" />
             </q-item-section>
