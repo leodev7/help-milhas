@@ -34,7 +34,7 @@
         </div>
 
         <div class="col-12 q-pb-md" v-if="usaraSpp">
-          <q-input outlined dense inputmode="numeric" maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model="valorDoSeguroProtecaoDePreco" class="full-width" label="Valor do Seguro Proteção de Preço" @update:model-value="calculandoValorFinal()" />
+          <q-input outlined dense inputmode="numeric" maxlength="7" prefix="R$ " color="black" label-color="black" bg-color="white" v-model.lazy="valorDoSeguroProtecaoDePreco" v-money="money" class="full-width" label="Valor do Seguro Proteção de Preço" @update:model-value="calculandoValorFinal()" />
         </div>
       </div>
 
@@ -193,9 +193,8 @@ export default {
 
       this.valorFinalDoProduto = parseFloat(this.precoDeCompraDoProduto.replace('.','').replace(',', '.')) - this.valorRecuperadoComPontos
       if (this.usaraSpp && this.valorDoSeguroProtecaoDePreco) {
-        this.valorFinalDoProduto -= this.valorDoSeguroProtecaoDePreco
-      } else {
-        this.valorFinalDoProduto += this.valorDoSeguroProtecaoDePreco
+        this.valorFinalDoProduto -= parseFloat(this.valorDoSeguroProtecaoDePreco.replace('.','').replace(',', '.'))
+      } else if (!this.usaraSpp && this.valorDoSeguroProtecaoDePreco) {
         this.valorDoSeguroProtecaoDePreco = ''
       }
       this.valorFinalDoProduto = ~~this.valorFinalDoProduto
