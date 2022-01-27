@@ -83,29 +83,10 @@ export default {
       } else if (this.transferenciaBonificada >= 10 && this.transferenciaBonificada <= 99) {
         this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * ('1.' + parseInt(this.transferenciaBonificada))
         this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
-      } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 100 && this.transferenciaBonificada < 200) {
-        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * ('2.' + parseInt(this.transferenciaBonificada.slice(1)))
-        this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
-      } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 200 && this.transferenciaBonificada < 300) {
-        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * ('3.' + parseInt(this.transferenciaBonificada.slice(1)))
-        this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
-      } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 300 && this.transferenciaBonificada < 400) {
-        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * ('4.' + parseInt(this.transferenciaBonificada.slice(1)))
-        this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
-      } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 400 && this.transferenciaBonificada < 500) {
-        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * ('5.' + parseInt(this.transferenciaBonificada.slice(1)))
-        this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
-      } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 500 && this.transferenciaBonificada < 600) {
-        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * ('6.' + parseInt(this.transferenciaBonificada.slice(1)))
-        this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
-      } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 600 && this.transferenciaBonificada < 700) {
-        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * ('7.' + parseInt(this.transferenciaBonificada.slice(1)))
-        this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
-      } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 700 && this.transferenciaBonificada < 800) {
-        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * ('8.' + parseInt(this.transferenciaBonificada.slice(1)))
-        this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
-      } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 800 && this.transferenciaBonificada < 900) {
-        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * ('9.' + parseInt(this.transferenciaBonificada.slice(1)))
+      } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 100) {
+        var x = this.transferenciaBonificada.substring(0, 1)
+        x = parseInt(x) + 1
+        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosAposTransferenciaCalculado * (x + '.' + parseInt(this.transferenciaBonificada.slice(1)))
         this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
       }
 

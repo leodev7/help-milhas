@@ -184,7 +184,9 @@ export default {
         this.totalDePontosAposTransferenciaCalculado = this.totalDePontosProdutosECartao * ('1.' + parseInt(this.transferenciaBonificada))
         this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
       } else if (typeof this.transferenciaBonificada === 'string' && this.transferenciaBonificada >= 100) {
-        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosProdutosECartao * ('2.' + parseInt(this.transferenciaBonificada.slice(1)))
+        var x = this.transferenciaBonificada.substring(0, 1)
+        x = parseInt(x) + 1
+        this.totalDePontosAposTransferenciaCalculado = this.totalDePontosProdutosECartao * (x + '.' + parseInt(this.transferenciaBonificada.slice(1)))
         this.totalDePontosAposTransferenciaCalculado = ~~this.totalDePontosAposTransferenciaCalculado
       }
 
