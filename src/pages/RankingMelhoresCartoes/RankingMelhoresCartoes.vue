@@ -5,6 +5,7 @@
         <div class="col-12">
           <q-input clearable outlined dense color="white" label-color="white" class="filtrarCartao full-width" label="Pesquisar cartão" v-model="filter" />
         </div>
+
         <q-card flat bordered class="my-card my-card-filter" v-for="(cartao, index) in cartoes.filter(element => filter ? element.nome.toLowerCase().includes(filter.toLowerCase()) : element)" :key="`cartao.${index}`">
           <q-card-section class="headerCardCartao">
             <img :src="cartao.icone" alt="Imagem do cartão de crédito" style="max-width: 100%">
@@ -19,6 +20,10 @@
             <p class="tituloCartoes">Observação:</p><p class="descricaoCartoes">{{ cartao.obs }}</p>
           </q-card-section>
         </q-card>
+
+        <div class="col-12">
+          <p><strong>FONTE DOS DADOS:</strong><br /><a href="https://www.melhoresdestinos.com.br/cartoes-de-credito" target="_blank">https://www.melhoresdestinos.com.br/cartoes-de-credito</a></p>
+        </div>
       </div>
 
       <q-page-scroller position="bottom-right" :scroll-offset="225" :offset="[18, 18]">
