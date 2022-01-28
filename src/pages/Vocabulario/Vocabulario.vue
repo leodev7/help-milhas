@@ -14,6 +14,10 @@
           </q-card-section>
         </q-card>
       </div>
+
+      <q-page-scroller position="bottom-right" :scroll-offset="225" :offset="[18, 18]">
+        <q-btn fab icon="keyboard_arrow_up" style="background-color: #FF522F" />
+      </q-page-scroller>
     </div>
   </q-page>
 </template>
