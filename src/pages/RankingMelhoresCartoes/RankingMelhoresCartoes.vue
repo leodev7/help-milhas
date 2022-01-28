@@ -2,7 +2,10 @@
   <q-page padding>
     <div class="container">
       <div class="row">
-        <q-card flat bordered class="my-card" v-for="(cartao, index) in cartoes" :key="`cartao.${index}`">
+        <div class="col-12">
+          <q-input clearable outlined dense color="white" label-color="white" class="filtrarCartao full-width" label="Pesquisar cartão" v-model="filter" />
+        </div>
+        <q-card flat bordered class="my-card my-card-filter" v-for="(cartao, index) in cartoes.filter(element => filter ? element.nome.toLowerCase().includes(filter.toLowerCase()) : element)" :key="`cartao.${index}`">
           <q-card-section class="headerCardCartao">
             <img :src="cartao.icone" alt="Imagem do cartão de crédito" style="max-width: 100%">
             <p>Posição: {{ index + 1 }}°</p>
@@ -31,7 +34,8 @@ export default {
 
   data () {
     return {
-      cartoes: []
+      cartoes: [],
+      filter: ''
     }
   },
 

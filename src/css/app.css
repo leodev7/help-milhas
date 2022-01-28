@@ -140,6 +140,18 @@ a:active {
 }
 
 /* Ranking cartoes */
+.filtrarCartao {
+  background-color: #FF522F;
+}
+
+.q-field--outlined .q-field__control {
+  border-radius: 0;
+}
+
+.my-card-filter {
+  margin-top: -5px;
+}
+
 .headerCardCartao {
   display: flex;
   flex-direction: column;
@@ -217,8 +229,8 @@ a:active {
     padding-top: 0;
   }
 
-  .my-card {
-    margin: 0.4rem 0.5rem;
+  .my-card-filter {
+    margin-top: -5px !important;
   }
 
   .redesSociais {
