@@ -173,7 +173,7 @@ export default {
       this.valorEmRealDosPontos = ~~this.valorEmRealDosPontos / 10
 
       this.lucroOuPrejuizo = this.valorEmRealDosPontos - this.valorDaAnuidadeEmMeses
-      this.lucroOuPrejuizo = ~~this.lucroOuPrejuizo
+      this.lucroOuPrejuizo = this.lucroOuPrejuizo.toFixed(2)
 
     },
 
