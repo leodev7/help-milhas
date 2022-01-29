@@ -102,7 +102,7 @@ import {VMoney} from 'v-money'
 
 export default {
   name: 'CalculadoraCompraInteligente',
-  directives: { money: VMoney},
+  directives: { money: VMoney },
 
   data () {
     return {
@@ -112,12 +112,12 @@ export default {
         precision: 2,
         masked: false
       },
+      valorCambio: '1.00',
       moeda: 'REAL',
       tiposDeMoedas: [
         { id: 'REAL', name: 'Real' },
         { id: 'DOLAR', name: 'Dolar' }
       ],
-      valorCambio: '1.00',
 
       usaraSpp: false,
 

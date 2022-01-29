@@ -31,7 +31,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item disable clickable :to="{ name: '#' }">
+          <q-item clickable :to="{ name: 'r_calculadoragastosmensais' }" @click="titulo = 'Calculadora de gastos'">
             <q-item-section avatar>
               <q-icon name="calculate" />
             </q-item-section>
