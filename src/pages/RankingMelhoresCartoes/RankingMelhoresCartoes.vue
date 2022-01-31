@@ -80,6 +80,11 @@ export default {
           this.cartoes[i].pontos = 'Não há ou não informado'
         }
 
+        if (this.cartoes[i].pontos && this.cartoes[i].pontos.toLowerCase().includes('<strong>')) {
+          this.cartoes[i].pontos = this.cartoes[i].pontos.replace('<strong>', '')
+          this.cartoes[i].pontos = this.cartoes[i].pontos.replace('</strong>', '')
+        }
+
         if (this.cartoes[i].salas && this.cartoes[i].salas.toLowerCase().includes('<br>')) {
           this.cartoes[i].salas = this.cartoes[i].salas.split('<br>')
           this.cartoes[i].salas = this.cartoes[i].salas.join('\n')
@@ -99,6 +104,11 @@ export default {
           this.cartoes[i].obs = this.cartoes[i].obs.join('\n')
         } else if (this.cartoes[i].obs === null) {
           this.cartoes[i].obs = 'Não há ou não informado'
+        }
+
+        if (this.cartoes[i].obs && this.cartoes[i].obs.toLowerCase().includes('<strong>')) {
+          this.cartoes[i].obs = this.cartoes[i].obs.replace('<strong>', '')
+          this.cartoes[i].obs = this.cartoes[i].obs.replace('</strong>', '')
         }
       }
     }
