@@ -215,7 +215,7 @@ td {
 
   th {
     width: 60%;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .q-checkbox.cursor-pointer.no-outline.row.inline.no-wrap.items-center.reverse.text-capitalize.q-ml-sm {
@@ -226,7 +226,6 @@ td {
 
   .my-card:first-child, .col-12:first-child {
     margin-top: 0;
-    padding-top: 0;
   }
 
   .my-card-filter {
