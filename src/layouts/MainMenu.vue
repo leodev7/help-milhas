@@ -138,7 +138,7 @@ export default {
   setup () {
     const $q = useQuasar()
 
-    $q.dark.set('auto')
+    $q.dark.set(false)
 
     function show (grid) {
       $q.bottomSheet({
