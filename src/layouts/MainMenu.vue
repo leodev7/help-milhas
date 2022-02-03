@@ -109,10 +109,9 @@
             </q-item-section>
 
             <q-item-section avatar>
-              <q-toggle v-model="temaDark" unchecked-icon="light_mode" checked-icon="dark_mode" @click="$q.dark.toggle()" />
+              <q-toggle v-model="corDoTema" unchecked-icon="light_mode" checked-icon="dark_mode" @click="trocarTema()" />
             </q-item-section>
           </q-item>
-
 
         </q-list>
         <div class="lojasDeAplicativos q-pt-xl">
@@ -130,7 +129,7 @@
 </template>
 
 <script>
-import { useQuasar, copyToClipboard } from 'quasar'
+import { useQuasar, copyToClipboard, LocalStorage } from 'quasar'
 
 export default {
   name: 'MainMenu',
@@ -198,7 +197,32 @@ export default {
     return {
       left: false,
       titulo: 'Compra inteligente',
-      temaDark: false
+      corDoTema: false
+    }
+  },
+  
+  mounted () {
+    this.temaEscolhido()
+  },
+
+  methods: {
+
+    temaEscolhido () {
+      if (LocalStorage.getItem('temaDark') === 'true') {
+        this.corDoTema = true
+      } else {
+        this.corDoTema = false
+      }
+      this.$q.dark.set(this.corDoTema)
+    },
+
+    trocarTema () {
+      this.$q.dark.toggle()
+      if (this.$q.dark.isActive) {
+        localStorage.setItem('temaDark', 'true')
+      } else {
+        localStorage.setItem('temaDark', 'false')
+      }
     }
   }
 }
