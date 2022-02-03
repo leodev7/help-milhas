@@ -1,0 +1,58 @@
+body.body--dark {
+  background: #082033;
+  color: white;
+}
+
+body.body--dark .q-field--dark .q-field__native, .q-field--dark .q-field__prefix {
+  color: black;
+}
+
+body.body--dark .tabela {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 12px;
+}
+
+body.body--dark tr {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  height: 25px;
+}
+
+body.body--dark tr:last-child {
+  border-bottom: 0;
+}
+
+/* Menu */
+
+body.body--dark .q-drawer {
+  background-color: #082033;
+}
+
+body.body--dark .q-virtual-scroll__content {
+  background-color: #082033;
+  color: black;
+}
+
+body.body--dark .q-checkbox__inner.relative-position.non-selectable.q-checkbox__inner--falsy {
+  color: white;
+}
+
+body.body--dark .botaoLimpar {
+  color: white;
+}
+
+body.body--dark .my-card-filter {
+  background-color: white;
+}
+
+body.body--dark .my-card {
+  background-color: white;
+}
+
+body.body--dark .my-card .q-separator--dark {
+  background-color: #0000001f;
+}
+
+body.body--dark .q-item.q-item-type.row.no-wrap.q-item--dark.text-black.q-item--active.q-item--clickable.q-link.cursor-pointer{
+  color: white !important;
+}

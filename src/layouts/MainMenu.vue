@@ -101,6 +101,19 @@
             </q-item-section>
           </q-item>
 
+          <q-separator />
+
+          <q-item>
+            <q-item-section>
+              <q-item-label>Tema: {{ $q.dark.isActive ? 'Dark' : 'Light' }}</q-item-label>
+            </q-item-section>
+
+            <q-item-section avatar>
+              <q-toggle v-model="temaDark" unchecked-icon="light_mode" checked-icon="dark_mode" @click="$q.dark.toggle()" />
+            </q-item-section>
+          </q-item>
+
+
         </q-list>
         <div class="lojasDeAplicativos q-pt-xl">
           <a href="https://apps.apple.com/ga/app/help-milhas/id1600378714" target="_blank"><img src="/img/appStore.jpg" alt="Loja de aplicativos apple" style="width: 150px" /></a>
@@ -124,6 +137,8 @@ export default {
 
   setup () {
     const $q = useQuasar()
+
+    $q.dark.set('auto')
 
     function show (grid) {
       $q.bottomSheet({
@@ -183,7 +198,8 @@ export default {
   data () {
     return {
       left: false,
-      titulo: 'Compra inteligente'
+      titulo: 'Compra inteligente',
+      temaDark: false
     }
   }
 }

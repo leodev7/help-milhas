@@ -21,10 +21,64 @@ time, mark, audio, video {
   border: 0;
 }
 
-body {
-  background: #082033;
-  color: white
+.container {
+  width: 70%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none
+}
+
+/* Menu */
+
+.q-drawer {
+  background: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.logo img {
+  border-radius: 100%;
+  width: 200px;
+}
+
+.q-router-link--active {
+  padding-left: 30px;
+  background-color: #FF522F;
+  color: white !important;
+}
+
+.lojasDeAplicativos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+
+.q-header {
+  background-color: transparent;
+  margin: 8px 16px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #FF522F
+}
+
+.q-header p {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* Calculadora compra inteligente */
 
 .q-field__native.row.items-center span, .q-icon.notranslate.material-icons.q-select__dropdown-icon, a {
   color: #FF522F;
@@ -32,10 +86,8 @@ body {
 }
 
 .q-virtual-scroll__content {
-  color: black
-}
-.q-checkbox__inner.relative-position.non-selectable.q-checkbox__inner--falsy {
-  color: white
+  color: black;
+  background-color: white;
 }
 
 .q-checkbox.cursor-pointer.no-outline.row.inline.no-wrap.items-center.reverse.text-capitalize.q-ml-sm {
@@ -43,12 +95,22 @@ body {
   top: -6px;
 }
 
+.q-checkbox__inner.relative-position.non-selectable.q-checkbox__inner--falsy {
+  color: black
+}
+
+.tabela {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 12px;
+}
+
 table { 
   border-collapse: collapse;
 }
 
 tr {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.659);
+  border-bottom: 1px solid rgb(0, 0, 0);
   height: 25px;
 }
 
@@ -64,67 +126,8 @@ td {
   text-align: right;
 }
 
-div.q-field__native.row.items-center {
-  padding: 0;
-}
-
-.container {
-  width: 70%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* menu */
-.q-drawer {
-  background: #082033;
-}
-
-.q-router-link--active {
-  padding-left: 30px;
-  background-color: #FF522F;
-  color: white !important;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 2rem;
-}
-
-.logo img {
-  border-radius: 100%;
-  width: 200px;
-}
-
 .botaoLimpar {
-  color: white !important;
-}
-
-/* app global css */
-.q-header {
-  background-color: transparent;
-  margin: 8px 16px 0;
-  display: flex;
-  justify-content: space-between;
-  color: #FF522F
-}
-
-.q-header p {
-  font-size: 20px;
-  font-weight: 800;
-}
-
-a:link, a:visited {
-  text-decoration: none
-}
-a:hover {
-  text-decoration: none;
-}
-a:active {
-  text-decoration: none
+  color: black;
 }
 
 .footer {
@@ -133,15 +136,11 @@ a:active {
   text-align: center;
 }
 
-.lojasDeAplicativos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* Ranking cartoes */
+
 .filtrarCartao {
   background-color: #FF522F;
+  padding-left: .7rem;
 }
 
 .q-field--outlined .q-field__control {
@@ -172,6 +171,7 @@ a:active {
 }
 
 /* Vocabulario */
+
 .my-card {
   width: 100%;
   color: black;

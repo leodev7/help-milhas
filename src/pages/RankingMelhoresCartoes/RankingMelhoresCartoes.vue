@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <q-input clearable outlined dense color="white" label-color="white" class="filtrarCartao full-width" label="Pesquisar cartão" v-model="filter" />
+          <q-input clearable dense color="white" label-color="white" class="filtrarCartao full-width" label="Pesquisar cartão" v-model="filter" />
         </div>
 
         <q-card flat bordered class="my-card my-card-filter" v-for="(cartao, index) in cartoes.filter(element => filter ? element.nome.toLowerCase().includes(filter.toLowerCase()) : element)" :key="`cartao.${index}`">

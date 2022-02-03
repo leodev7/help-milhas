@@ -17,7 +17,7 @@
       </div>
 
       <div class="row q-mt-md">
-        <div class="col-12" style="border: 1px solid rgba(255, 255, 255, 0.659); border-radius: 5px; padding: 12px">
+        <div class="col-12 tabela">
           <table style="width:100%">
             <tr>
               <th>Valor Investido:</th>
