@@ -142,7 +142,6 @@ export default {
 
     function show (grid) {
       $q.bottomSheet({
-        dark: true,
         message: 'Compartilhar site no',
         grid,
         actions: [
